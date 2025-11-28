@@ -48,6 +48,12 @@ class RICSStore {
             this.data.races = this.processRacesData(racesData);
             this.filteredData.races = [...this.data.races];
 
+            // Load events
+            const eventsResponse = await fetch('data/Incidents.json');
+            const eventsData = await eventsResponse.json();
+            this.data.events = this.processEventsData(eventsData);
+            this.filteredData.events = [...this.data.events];
+
             console.log('Data loaded:', {
                 items: this.data.items.length,
                 traits: this.data.traits.length,
@@ -86,18 +92,21 @@ class RICSStore {
             .filter(item => item.price > 0); // Only items with price > 0
     }
 
-    processEventsData(data) {
-        // Adjust this based on your actual Events JSON structure
-        return Object.entries(data)
-            .map(([defname, eventData]) => ({
-                defname,
-                name: eventData.CustomName || defname,
-                price: eventData.BasePrice || 0,
-                karmaType: eventData.KarmaType || 'None',
-                enabled: eventData.Enabled !== false
-            }))
-            .filter(event => event.enabled && event.price > 0);
+    processEventsData(eventsObject) {
+        return Object.entries(eventsObject)
+            .map(([key, eventData]) => {
+                return {
+                    defName: eventData.DefName || key,
+                    label: eventData.Label || eventData.DefName || key,
+                    baseCost: eventData.BaseCost || 0,
+                    karmaType: eventData.KarmaType || 'None',
+                    modSource: eventData.ModSource || 'Unknown',
+                    enabled: eventData.Enabled !== false
+                };
+            })
+            .filter(event => event.enabled && event.baseCost > 0);
     }
+
 
     processTraitsData(traitsObject) {
         return Object.entries(traitsObject)
@@ -257,17 +266,26 @@ class RICSStore {
         const events = this.filteredData.events;
 
         if (events.length === 0) {
-            tbody.innerHTML = '<tr><td colspan="3" style="text-align: center; padding: 40px;">No events found</td></tr>';
+            tbody.innerHTML = '<tr><td colspan="4" style="text-align: center; padding: 40px;">No events found</td></tr>';
             return;
         }
 
         tbody.innerHTML = events.map(event => `
-            <tr>
-                <td>${this.escapeHtml(event.name)}</td>
-                <td>${event.price}</td>
-                <td>${this.escapeHtml(event.karmaType)}</td>
-            </tr>
-        `).join('');
+        <tr>
+            <td>
+                <div class="item-name">${this.escapeHtml(event.label)}</div>
+                <span class="metadata">
+                    ${this.escapeHtml(event.defName)}
+                    <br>From ${this.escapeHtml(event.modSource)}
+                    <br>Usage: !event ${this.escapeHtml(event.label)} or !event ${this.escapeHtml(event.defName)}
+                </span>
+            </td>
+            <td class="no-wrap">
+                <strong>${event.baseCost}</strong>
+            </td>
+            <td>${this.escapeHtml(event.karmaType)}</td>
+        </tr>
+    `).join('');
     }
 
     renderTraits() {
