@@ -98,6 +98,17 @@
     "ModSource": "Anomaly",
     "Version": 1
   },
+  "Windy": {
+    "DefName": "Windy",
+    "Label": "windy",
+    "Description": "Strong winds reduce movement speed.\n\n<i><color=#66E0E4FF>Odyssey</color></i>",
+    "BaseCost": 175,
+    "KarmaType": "Neutral",
+    "EventCap": 3,
+    "Enabled": true,
+    "ModSource": "Odyssey",
+    "Version": 1
+  },
   "ToxRain": {
     "DefName": "ToxRain",
     "Label": "tox rain",
@@ -164,26 +175,92 @@
     "ModSource": "Odyssey",
     "Version": 1
   },
-  "Windy": {
-    "DefName": "Windy",
-    "Label": "windy",
-    "Description": "A clear, windy day, great for turbines, not so great for shooting.\n\n<i><color=#66E0E4FF>Seasonal Weather (Continued)</color></i>",
+  "VPE_RadioactiveFog": {
+    "DefName": "VPE_RadioactiveFog",
+    "Label": "radioactive fog",
+    "Description": "A Nuclear reactor's meltdown has freed a cloud of radioactive material. This fog will hinder ranged attacks until it dissipates.\n\n<i><color=#66E0E4FF>Vanilla Furniture Expanded - Power</color></i>",
+    "BaseCost": 150,
+    "KarmaType": "Neutral",
+    "EventCap": 3,
+    "Enabled": true,
+    "ModSource": "Vanilla Furniture Expanded - Power",
+    "Version": 1
+  },
+  "VQE_AncientSilo": {
+    "DefName": "VQE_AncientSilo",
+    "Label": "ancient silo",
+    "Description": null,
     "BaseCost": 175,
     "KarmaType": "Neutral",
     "EventCap": 3,
     "Enabled": true,
-    "ModSource": "Seasonal Weather (Continued)",
+    "ModSource": "Vanilla Quests Expanded - Deadlife",
     "Version": 1
   },
-  "SnowyThunderStorm": {
-    "DefName": "SnowyThunderStorm",
-    "Label": "thundersnow",
-    "Description": "A rare winter phenomenon where heavy snow falls with lightning and thunder. The snow reduces visibility and movement while lightning poses fire risks.\n\n<i><color=#66E0E4FF>(CAP) Thunder Snow</color></i>",
+  "AM_Facilities": {
+    "DefName": "AM_Facilities",
+    "Label": "facilities",
+    "Description": "There is no weather in facilities.\n\n<i><color=#66E0E4FF>Ancient urban ruins</color></i>",
+    "BaseCost": 175,
+    "KarmaType": "Neutral",
+    "EventCap": 3,
+    "Enabled": true,
+    "ModSource": "Ancient urban ruins",
+    "Version": 1
+  },
+  "VPE_Hurricane": {
+    "DefName": "VPE_Hurricane",
+    "Label": "hurricane",
+    "Description": "Extreme wind will cause a slowdown to everyone not under the roof.\n\n<i><color=#66E0E4FF>Vanilla Psycasts Expanded</color></i>",
     "BaseCost": 300,
     "KarmaType": "Bad",
     "EventCap": 3,
     "Enabled": true,
-    "ModSource": "[CAP] Thunder Snow",
+    "ModSource": "Vanilla Psycasts Expanded",
+    "Version": 1
+  },
+  "ARKPPP_ARES_DryThunderstorm": {
+    "DefName": "ARKPPP_ARES_DryThunderstorm",
+    "Label": "dry thunderstorm",
+    "Description": "Dry thunderstorms are dangerous because the lightning can start fires and there is no rain to put them out.\n\n<i><color=#66E0E4FF>Power++</color></i>",
+    "BaseCost": 300,
+    "KarmaType": "Bad",
+    "EventCap": 3,
+    "Enabled": true,
+    "ModSource": "Power++",
+    "Version": 1
+  },
+  "VPEH_Bloodstorm": {
+    "DefName": "VPEH_Bloodstorm",
+    "Label": "bloodstorm",
+    "Description": "Mystical downpour of blood, caused by forbidden hemosage psycast. While non-hemogenic individuals are choking on blood, sanguophages regenerate hemogen and can cast psycasts without worrying about psychic heat.\n\n<i><color=#66E0E4FF>Vanilla Psycasts Expanded - Hemosage</color></i>",
+    "BaseCost": 600,
+    "KarmaType": "Doom",
+    "EventCap": 3,
+    "Enabled": true,
+    "ModSource": "Vanilla Psycasts Expanded - Hemosage",
+    "Version": 1
+  },
+  "VREA_PsychicStorm": {
+    "DefName": "VREA_PsychicStorm",
+    "Label": "psychic storm",
+    "Description": "Psychic storm is a supernatural phenomena that occurs during the periods of increased psychic activity.\n\n<i><color=#66E0E4FF>Vanilla Races Expanded - Archon</color></i>",
+    "BaseCost": 300,
+    "KarmaType": "Bad",
+    "EventCap": 3,
+    "Enabled": true,
+    "ModSource": "Vanilla Races Expanded - Archon",
+    "Version": 1
+  },
+  "DeltaStreamSTNL": {
+    "DefName": "DeltaStreamSTNL",
+    "Label": "Delta Stream",
+    "Description": "A large tornado in the sky, strong enough to overpower other weather conditions, wind speed is increased massively.\n\n<i><color=#66E0E4FF>VPE - Aeromancer</color></i>",
+    "BaseCost": 175,
+    "KarmaType": "Neutral",
+    "EventCap": 3,
+    "Enabled": true,
+    "ModSource": "VPE - Aeromancer",
     "Version": 1
   }
 }
