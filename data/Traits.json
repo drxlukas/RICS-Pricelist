@@ -520,13 +520,15 @@
     "DefName": "GreatMemory",
     "Name": "Great memory",
     "Degree": 0,
-    "Description": "{PAWN_nameDef} has a fantastic memory for detail. {PAWN_pronoun} will lose unused skills at half the rate of other people.",
-    "Stats": [],
+    "Description": "{PAWN_nameDef} has a fantastic memory for detail. {PAWN_pronoun} will learn new skills slightly faster than other people.",
+    "Stats": [
+      "+25.0% Global learning factor"
+    ],
     "Conflicts": [],
     "CanAdd": true,
     "CanRemove": true,
-    "AddPrice": 150,
-    "RemovePrice": 250,
+    "AddPrice": 243,
+    "RemovePrice": 406,
     "BypassLimit": false,
     "CustomName": false,
     "KarmaTypeForAdding": null,
@@ -3852,6 +3854,24 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "RimWorld",
+    "Version": 1
+  },
+  "AM_Ahimsa_0": {
+    "DefName": "AM_Ahimsa",
+    "Name": "Vow of nonviolence",
+    "Degree": 0,
+    "Description": "A strict principle of nonviolence which applies to all living things.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Alpha Memes",
     "Version": 1
   }
 }
