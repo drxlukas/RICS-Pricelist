@@ -502,5 +502,17 @@
     "ModSource": "A RimWorld of Magic",
     "modactive": true,
     "Version": 1
+  },
+  "TorrentialRainSTNL": {
+    "DefName": "TorrentialRainSTNL",
+    "Label": "torrential rain",
+    "Description": "Torrential rain causes flooding. It also reduces the accuracy of ranged weapons, extinguishes fire, and slows people down.\n\n<i><color=#66E0E4FF>VPE - Hydromancer</color></i>",
+    "BaseCost": 300,
+    "KarmaType": "Bad",
+    "EventCap": 3,
+    "Enabled": true,
+    "ModSource": "VPE - Hydromancer",
+    "modactive": true,
+    "Version": 1
   }
 }
